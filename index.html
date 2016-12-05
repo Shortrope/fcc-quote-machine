@@ -2,22 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Test Ajax</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Quote Generator</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="btn-container">
-        <button id="get-data" class="btn">Get Quote</button>
-        <button id="tweet-btn" class="btn btn-tweet">Tweet</button>
-    </div>
-    <div class="quote-container">
-        <blockquote id="quote" class="quote">
-        </blockquote>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="getquote.js"></script>
+  <h1>Random Quote Generator</h1>
+  <div id="btn-container" class="btn-container">
+    <button id="next-quote" class="btn">Next Quote</button>
+    <div id="tweet-container"></div>
+  </div>
+  
+
+  <div class="quote-container">
+    <blockquote id="quote" class="quote">
+    </blockquote>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="getquote.js"></script>
+  <script src="twitter.js"></script>
+
+
 </body>
 
 </html>

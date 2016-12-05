@@ -1,93 +1,101 @@
 body {
-    background: #D1C6A7;
-    background: #ededed;
-    width: 960px;
-    max-width: 90%;
-    margin: 0 auto;
-    padding-top: 48px;
-    color: #333;
+  font-family: Lato;
+  background: #D1C6A7;
+  background: #ededed;
+  width: 960px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  color: #333;
 }
 
 h1,
 h2 {
-    text-align: center;
+  text-align: center;
+  color: #666;
+  font-weight: 100;
+  font-size: 3em;
+  line-height: 1.0em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bbb;
 }
 
 a {
-    outline: 0;
+  outline: 0;
 }
 
 .header {
-    margin-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .quote-container {
-    width: 70%;
-    min-height: 300px;
-    float: left;
-    background: transparent;
-    font-style: italic;
+  width: 70%;
+  min-height: 300px;
+  float: left;
+  background: transparent;
+  font-style: italic;
 }
 
 .quote {
-    font-size: 3em;
-    text-align: right;
-    margin-top: 0;
-    color: #48468C;
+  font-size: 3em;
+  text-align: right;
+  margin-top: 0;
+  color: #48468C;
 }
 
 .quote p {
-    margin-top: 0;
-    text-shadow: 2px 2px 2px #aaa;
+  margin-top: 0;
+  text-shadow: 2px 2px 2px #aaa;
 }
 
 .author {
-    font-size: .6em;
-    text-align: right;
-    color: #0F5C8C;
+  font-size: .6em;
+  text-align: right;
+  color: #0F5C8C;
 }
 
 .btn-container {
-    width: 28%;
-    float: right;
-    padding-top: 20px;
+  width: 28%;
+  float: right;
+  padding-top: 20px;
 }
 
 .btn {
-    width: 100%;
-    height: 150px;
-    background: transparent;
-    background: #bf2642;
-    color: #fff;
-    font-size: 2em;
-    font-weight: 600;
-    border: 2px solid #aF1632;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  background: #bf2642;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 600;
+  border: 2px solid #aF1632;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
-}
 .btn-tweet {
-    background: #0F5C8C;
-    border: 2px solid #0f4c7c;
+  background: #0F5C8C;
+  border: 2px solid #0f4c7c;
 }
+
 button::-moz-focus-inner {
   border: 0;
 }
 
 @media (max-width: 767px) {
-    .btn-container {
-        float: none;
-        width: 90%;
-        margin: 0 auto 32px;
-    }
-    .quote-container {
-        margin: 0 auto;
-        width: 90%;
-        float: none;
-    }
-    .quote {
-        float: none;
-        text-align: center;
-        font-size: 2.5em;
-    }
+  .btn-container {
+    float: none;
+    width: 90%;
+    margin: 0 auto 32px;
+  }
+  .quote-container {
+    margin: 0 auto;
+    width: 90%;
+    float: none;
+  }
+  .quote {
+    float: none;
+    text-align: center;
+    font-size: 2.5em;
+  }
 }
