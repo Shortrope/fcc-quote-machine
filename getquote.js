@@ -5,8 +5,7 @@ $(document).ready(function () {
   var htmlContent = '',
     theQuote = '',
     theAuthor = '',
-    theTweet = '',
-    longerQuotes = [];
+    theTweet = '';
 
   // the tweet factory uses a raw js element
   var tweetBtnContainer = document.getElementById("tweet-container");
@@ -30,12 +29,9 @@ $(document).ready(function () {
         cache: false,
         error: function (jqXHR, err) {
           console.log('Error');
+          console.log(err);
         },
         success: function (data, status, jqXHR) {
-          console.log('status: ' + status);
-          console.log('data:');
-          console.dir(data);
-
           // Get the quote text
           htmlContent = data[0].content.trim(); // trim trailing whitespace
           theQuote = htmlContent.substring(3, htmlContent.length - 4).trim(); // remove html 'p' tacs and a couple of spaces at the end
@@ -45,12 +41,10 @@ $(document).ready(function () {
 
           // Create the Tweet content
           theTweet = '"' + theQuote + '" ' + theAuthor;
-          console.log(theTweet.length);
 
           // Get another quote if tweet will contain too many chars
           if (theTweet.length > 132) { // subtract 8 chars for the hashtag '#quotes'
             getQuote();
-            longerQuotes.push(theTweet.length);
           } else {
             tweetBtnContainer.innerHTML = '';
             twttr.widgets.createShareButton(
@@ -65,12 +59,10 @@ $(document).ready(function () {
             $('#quote').html(htmlContent + '<p class="author">-' + theAuthor + '</p>');
             $('#quote').css('visibility', 'visible');
           }
-          console.log(longerQuotes);
         },
         complete: function (jqXHR, status) {
           console.log('complete');
           console.log('status: ' + status);
-          longerThan140 = false;
         },
 
       }); /* end $.ajax() */
